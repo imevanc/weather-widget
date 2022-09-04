@@ -1,9 +1,11 @@
+import React from "react";
+
 const Rectangle = ({ lines }) => {
   return (
-    <div className="border-blue-700 border-solid border-2">
+    <div className="pt-5 pb-5">
       {lines.map((line, idx) => {
         return (
-          <div key={idx} className="text-violet-500 m-2">
+          <div key={idx} className={`text-violet-500 `}>
             {line}
           </div>
         );
@@ -13,3 +15,5 @@ const Rectangle = ({ lines }) => {
 };
 
 export default Rectangle;
+
+// mt-10 mb-10 ml-5 mr-5
