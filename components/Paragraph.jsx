@@ -1,6 +1,6 @@
 import React from "react";
 
-const Rectangle = ({ lines }) => {
+const Paragraph = ({ lines }) => {
   return (
     <div className="pt-5 pb-5">
       {lines.map((line, idx) => {
@@ -14,6 +14,6 @@ const Rectangle = ({ lines }) => {
   );
 };
 
-export default Rectangle;
+export default Paragraph;
 
 // mt-10 mb-10 ml-5 mr-5
