@@ -1,8 +1,8 @@
-import Bold from "./Components/Bold";
-import Normal from "./Components/Normal";
-import HorizontalLine from "./Components/HorizontalLine";
+import Bold from "./Bold";
+import Normal from "./Normal";
+import HorizontalLine from "./HorizontalLine";
 
-const Typography = () => {
+const WeatherToday = () => {
   const location = "Manchester";
   const date = "4 Sept 2022";
   const currentTemp = "20 C";
@@ -32,4 +32,4 @@ const Typography = () => {
   );
 };
 
-export default Typography;
+export default WeatherToday;

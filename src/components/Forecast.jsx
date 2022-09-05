@@ -1,4 +1,4 @@
-import ForecastWidget from "./Components/ForecastWidget";
+import ForecastWidget from "./ForecastWidget";
 
 const Forecast = () => {
   const offForTabletsAndPhones =
