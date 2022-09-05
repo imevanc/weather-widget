@@ -1,5 +1,5 @@
 import WeatherToday from "../components/WeatherToday";
-import Icon from "../components/Icon";
+import WeatherTodayIcon from "../components/WeatherTodayIcon";
 import Forecast from "../components/Forecast";
 import React from "react";
 import { showError } from "../utils/utils";
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="h-4/6 w-4/6 flex-col shadow-xl border-slate-500 border-4 border-double">
           <div className="h-4/6 w-full flex">
             <WeatherToday />
-            <Icon />
+            <WeatherTodayIcon />
           </div>
           <Forecast />
         </div>
