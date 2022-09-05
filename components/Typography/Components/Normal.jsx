@@ -1,6 +1,6 @@
 const Normal = ({ title }) => {
   return (
-    <div className="self-center text-slate-100 font-medium text-sm sm: text-sm md:text-base lg:text-lg">
+    <div className="self-center text-slate-100 text-xl sm:text-base md:text-lg lg:text-xl xl:text-xl">
       {title}
     </div>
   );
