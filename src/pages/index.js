@@ -2,7 +2,7 @@ import WeatherToday from "../components/WeatherToday";
 import WeatherTodayIcon from "../components/WeatherTodayIcon";
 import Forecast from "../components/Forecast";
 import React from "react";
-import { showError } from "../utils/utils";
+import { getError } from "../utils/getError";
 import { LocationProvider } from "../context/LocationProvider";
 
 export default function Home() {
@@ -21,11 +21,11 @@ export default function Home() {
         },
         (error) => {
           clearTimeout(locationTimeout);
-          alert(showError(error));
+          alert(getError(error));
         }
       );
     } else {
-      alert(showError(error));
+      alert(getError(error));
     }
   }, []);
   return (

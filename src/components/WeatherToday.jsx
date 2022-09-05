@@ -1,4 +1,4 @@
-import Bold from "./Bold";
+import Heading from "./Heading";
 import Normal from "./Normal";
 import HorizontalLine from "./HorizontalLine";
 
@@ -14,19 +14,29 @@ const WeatherToday = () => {
   return (
     <div className="w-full md:w-8/12 h:full md:h-full bg-gradient-to-b from-sky-500 to-sky-300 flex flex-col justify-evenly items-left ">
       <div className="self-center flex flex-col">
-        <Bold title={location} />
-        <Normal title={date} />
+        <Heading title={location} />
+        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+          {date}
+        </div>
       </div>
       <HorizontalLine />
       <div className="self-center flex flex-col">
-        <Bold title={currentTemp} />
-        <Normal title={highLowTemp} />
-        <Normal title={commentOnTemp} />
+        <Heading title={currentTemp} />
+        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+          {highLowTemp}
+        </div>
+        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+          {commentOnTemp}
+        </div>
       </div>
       <HorizontalLine />
       <div className="self-center  flex flex-col">
-        <Normal title={feelsLike} />
-        <Normal title={humidity} />
+        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+          {feelsLike}
+        </div>
+        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+          {humidity}
+        </div>
       </div>
     </div>
   );

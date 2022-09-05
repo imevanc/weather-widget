@@ -1,4 +1,4 @@
-exports.showError = (error) => {
+export const getError = (error) => {
   switch (error.code) {
     case error.PERMISSION_DENIED:
       return "User denied the request for Geolocation.";
