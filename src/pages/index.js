@@ -26,8 +26,6 @@ export default function Home() {
     fetchWeather(location).catch((error) => console.log(error));
   }, [location]);
 
-  console.log(weather);
-
   return (
     <div className="flex justify-center items-center flex-col h-screen w-screen">
       <div className="h-4/6 w-4/6 flex-col shadow-xl border-slate-500 border-4 border-double">
