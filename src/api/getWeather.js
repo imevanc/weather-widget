@@ -1,4 +1,5 @@
 import axios from "axios";
+
 // get weather
 export const getWeather = async (location) => {
   const { lat, lon } = location;
@@ -8,7 +9,6 @@ export const getWeather = async (location) => {
     appid: `${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`,
   };
   try {
-    console.log(params);
     const res = await axios.get(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${params.lat}&lon=${params.lon}&appid=${params.appid}`
     );
