@@ -1,5 +1,4 @@
 import Heading from "./Heading";
-import Normal from "./Normal";
 import HorizontalLine from "./HorizontalLine";
 
 const WeatherToday = () => {

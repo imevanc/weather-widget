@@ -1,5 +1,3 @@
-import Normal from "./Normal";
-
 const ForecastWidget = ({ styles }) => {
   return (
     <div
