@@ -21,10 +21,10 @@ const WeatherToday = ({ weather }) => {
   const humidity = `Humidity: ${weatherToday.main.humidity} %`;
 
   return (
-    <div className="w-full md:w-8/12 h:full md:h-full bg-gradient-to-b from-sky-500 to-sky-300 flex flex-col justify-evenly items-left ">
+    <div className="w-full md:w-8/12 h-full md:h-full bg-gradient-to-b from-sky-500 to-sky-300 flex flex-col justify-evenly items-left">
       <div className="self-center flex flex-col">
         <Heading title={location} />
-        <div className="self-center text-slate-100 text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
+        <div className=" self-center text-slate-100 text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl">
           {date}
         </div>
       </div>
