@@ -10,7 +10,7 @@ export default function Home() {
     lat: "40.730610",
     lon: "-73.935242",
   });
-  const [weather, setWeather] = React.useState({});
+  const [weather, setWeather] = React.useState(null);
 
   React.useEffect(() => {
     const fetchWeather = async (loc) => {
@@ -26,17 +26,17 @@ export default function Home() {
     fetchWeather(location).catch((error) => console.log(error));
   }, [location]);
 
-  console.log(weather);
-
   return (
-    <div className="flex justify-center items-center flex-col h-screen w-screen">
-      <div className="h-4/6 w-4/6 flex-col shadow-xl border-slate-500 border-4 border-double">
-        <div className="h-4/6 w-full flex">
-          <WeatherToday />
-          <WeatherTodayIcon location={location} setLocation={setLocation} />
+    weather && (
+      <div className="flex justify-center items-center flex-col h-screen w-screen">
+        <div className="h-4/6 w-4/6 flex-col shadow-xl border-slate-500 border-4 border-double">
+          <div className="h-4/6 w-full flex">
+            <WeatherToday weather={weather} />
+            <WeatherTodayIcon location={location} setLocation={setLocation} />
+          </div>
+          <Forecast />
         </div>
-        <Forecast />
       </div>
-    </div>
+    )
   );
 }

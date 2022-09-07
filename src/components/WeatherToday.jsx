@@ -1,14 +1,25 @@
 import Heading from "./Heading";
 import HorizontalLine from "./HorizontalLine";
+import {
+  getTodaysData,
+  getDateAsAString,
+  kelvinToCelsius,
+} from "../utils/date";
 
-const WeatherToday = () => {
-  const location = "Manchester";
-  const date = "4 Sept 2022";
-  const currentTemp = "20 C";
-  const highLowTemp = "High: 23 C, Low: 17 C";
-  const commentOnTemp = "Mostly Cloudy";
-  const feelsLike = "Feels Like: 22 C";
-  const humidity = "Humidity: 50 %";
+const WeatherToday = ({ weather }) => {
+  const weatherToday = getTodaysData(weather.weather);
+  const location = weather.city;
+  const date = getDateAsAString(weatherToday.dt_txt);
+  const currentTemp = `${kelvinToCelsius(weatherToday.main.temp)} C`;
+  console.log(weatherToday);
+  const highLowTemp = `High: ${kelvinToCelsius(
+    weatherToday.main.temp_max
+  )} C, Low: ${kelvinToCelsius(weatherToday.main.temp_max)} C`;
+  const commentOnTemp = `${weatherToday.weather[0].main}`;
+  const feelsLike = `Feels Like: ${kelvinToCelsius(
+    weatherToday.main.feels_like
+  )} C`;
+  const humidity = `Humidity: ${weatherToday.main.humidity} %`;
 
   return (
     <div className="w-full md:w-8/12 h:full md:h-full bg-gradient-to-b from-sky-500 to-sky-300 flex flex-col justify-evenly items-left ">
