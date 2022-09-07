@@ -74,4 +74,5 @@ The application will run on http://localhost:3000.
 
 - Hosting on Netlify or similar services.
 - Type Checking: There is no type checking at the moment. I would convert all the code in Typescript, if I had to do it again.
-- 
+- User Friendly messages for API loading and error states.
+- State Management for storing the API response. However, there is not state drifting at the moment even without the state management.
