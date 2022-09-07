@@ -18,6 +18,44 @@ export const dayOfWeekAsString = (dayIndex) => {
   );
 };
 
+export const getDateAsAString = (dt_txt) => {
+  /**
+   * Converts a db date string to a UK/EU date string format.
+   *
+   * @param {String} dt_txt
+   * @return {String} Returns date as string
+   */
+  const date = new Date(dt_txt).getDate();
+  const month = new Date(dt_txt).getMonth();
+  const year = new Date(dt_txt).getFullYear();
+  return `${date} ${toMonthName(month)} ${year}`;
+};
+
+export const kelvinToCelsius = (kelvinTemp) => {
+  /**
+   * Converts a kelvin temp to celsius temp
+   *
+   * @param {Number} kelvinTemp
+   * @return {Number} Returns celsius temp as Number
+   */
+  return (kelvinTemp - 272.15).toFixed(0);
+};
+
+export const toMonthName = (monthNumber) => {
+  /**
+   * Converts a day number to a string.
+   *
+   * @param {Number} monthNumber
+   * @return {String} Returns month as string
+   */
+  const date = new Date();
+  date.setMonth(monthNumber - 1);
+
+  return date.toLocaleString("en-US", {
+    month: "long",
+  });
+};
+
 export const fourUniqueDays = (list) => {
   let fourUniqueDaysArray = [];
   for (let i = 0; i <= list.length - 1; i++) {
