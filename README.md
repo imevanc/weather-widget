@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather Widget
 
-## Getting Started
+This is a JS application created with TailwindCSS, React.js & axios.
 
-First, run the development server:
+# Table of contents
+- [Weather Widget](#weather-widget)
+- [Table of contents](#table-of-contents)
+- [General-Information <a name="general-information"></a>](#general-information-)
+- [Tech Stack <a name="tech-stack"></a>](#tech-stack-)
+- [Setup <a name="setup"></a>](#setup-)
+  - [Dependencies <a name="dependencies"></a>](#dependencies-)
+  - [Installation <a name="Installation"></a>](#installation-)
+- [Future-Work <a name="future-work"></a>](#future-work-)
 
-```bash
-npm run dev
-# or
-yarn dev
+# General-Information <a name="general-information"></a>
+
+The main purpose was to create an application which renders the weather and the weather forecast for the following days. I used uizard webpage for drafting a single-page app and wrote down state diagrams. I created a trello board for progress management after that and translated the state diagrams to software tickets. The application was created with Next.js using React.js and styled with TailwindCSS framework. It is responsive and scalable; I considered both mobile and web views. If you enter into the responsive design from your browser, you can see changes on the design, as a few components are disabled when the screen resolution goes down. The weather-widget application fetches data from the openweathermap api using an axios object.
+
+# Tech Stack <a name="tech-stack"></a>
+
+```
+JavaScript
+React
+TailwindCSS
+CSS
+HTML
+Axios.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Setup <a name="setup"></a>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Dependencies <a name="dependencies"></a>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<br> -> Please have a look at the list below in order to see the version of each dependency that the developer used. <-
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+axios: ^0.27.2
+dotenv: ^16.0.2
+next: 12.2.5
+react: 18.2.0
+react-dom: 18.2.0
+autoprefixer: ^10.4.8
+eslint: 8.23.0
+eslint-config-next: 12.2.5
+postcss: ^8.4.16
+tailwindcss: ^3.1.8
+```
+## Installation <a name="Installation"></a>
 
-## Learn More
+To run this project you will need to clone this repository onto your local machine.
 
-To learn more about Next.js, take a look at the following resources:
+```
+$ git clone https://github.com/imevanc/weather-widget
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate inside the folder and install all dependencies by entering the following commands on your terminal window:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+$ cd weather-widget
+$ npm install
+```
 
-## Deploy on Vercel
+Create an [openweathermap account](https://openweathermap.org) and paste your api key in a dotenv file in the root of this project. You can find more information on how to do it on the docs of [Next.js](https://nextjs.org/docs/basic-features/environment-variables)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run the application locally enter:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+$ npm run dev
+```
+
+The application will run on http://localhost:3000.
+
+# Future-Work <a name="future-work"></a>
+
+- Hosting on Netlify or similar services.
+- Type Checking: There is no type checking at the moment. I would convert all the code in Typescript, if I had to do it again.
+- 
