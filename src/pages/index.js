@@ -32,9 +32,13 @@ export default function Home() {
         <div className="h-4/6 w-4/6 flex-col shadow-xl border-slate-500 border-4 border-double">
           <div className="h-4/6 w-full flex">
             <WeatherToday weather={weather} />
-            <WeatherTodayIcon location={location} setLocation={setLocation} />
+            <WeatherTodayIcon
+              weather={weather}
+              location={location}
+              setLocation={setLocation}
+            />
           </div>
-          <Forecast />
+          <Forecast weather={weather} />
         </div>
       </div>
     )

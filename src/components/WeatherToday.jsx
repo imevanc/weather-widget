@@ -11,7 +11,6 @@ const WeatherToday = ({ weather }) => {
   const location = weather.city;
   const date = getDateAsAString(weatherToday.dt_txt);
   const currentTemp = `${kelvinToCelsius(weatherToday.main.temp)} C`;
-  console.log(weatherToday);
   const highLowTemp = `High: ${kelvinToCelsius(
     weatherToday.main.temp_max
   )} C, Low: ${kelvinToCelsius(weatherToday.main.temp_max)} C`;
